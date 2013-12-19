@@ -1,0 +1,43 @@
+# Gherzan.ro
+
+# IMAP
+set from = "andrei@gherzan.ro"
+set hostname = "gmail.com"
+set realname = "Andrei Gherzan"
+set imap_user = "andrei@gherzan.ro"
+
+# Folders
+set folder      = "imaps://imap.gmail.com:993"
+set spoolfile   = "+INBOX"
+set postponed   ="+[Gmail]/Drafts"
+set trash       = "+[Gmail]/Trash"
+set record      = "+[Gmail]/Sent Mail"
+
+# SMTP
+set smtp_url = "smtp://andrei@gherzan.ro@smtp.gmail.com:587/"
+
+# Key bindings
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index gs "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to Sent Mail"
+macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+
+# Signature
+set signature="~/.mutt/accounts/.mutt-signature-personal"
+
+mailboxes   +INBOX  \
+            =[Gmail]/Drafts \
+            =[Gmail]/'Sent Mail' \
+            =[Gmail]/Spam \
+            =[Gmail]/Trash \
+            =MailingLists \
+            =MailingLists/meta-raspberrypi \
+            =MailingLists/meta-freescale \
+            =MailingLists/meta-fsl-arm \
+            =MailingLists/bitbake-devel \
+            =MailingLists/meta-intel \
+            =MailingLists/meta-openembedded \
+            =MailingLists/openembedded-core \
+            =MailingLists/yocto \
+            =MailingLists/kernel \
+            =Personal/Plati
