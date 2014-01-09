@@ -188,12 +188,13 @@ exec owncloud
 #exec qjoypad
 exec gnome-sound-applet
 #exec conky -c ~/.conkyrc
-exec "xautolock -locker pyxtrlock -time 1"
+#exec "xautolock -locker pyxtrlock -time 1"
 exec "udiskie -t"           # automount
 exec "unclutter -keystroke" # hide the mouse
 exec dunst -conf ~/.dunstrc # notification daemon
 exec "/usr/share/android-notifier-desktop/run.sh"
 exec "hsetroot -fill ~/slim/themes/andrux/background.png && compton --config ~/.compton"
+exec "notifmail -n"
 
 #
 # My shortcuts
