@@ -11,7 +11,7 @@ set folder      = "imaps://imap.gmail.com:993"
 set spoolfile   = "+INBOX"
 set postponed   ="+[Gmail]/Drafts"
 set trash       = "+[Gmail]/Trash"
-set record      = "+[Gmail]/Sent Mail"
+unset record
 
 # SMTP
 set smtp_url = "smtp://andrei@gherzan.ro@smtp.gmail.com:587/"
@@ -40,4 +40,6 @@ mailboxes   +INBOX  \
             =MailingLists/openembedded-core \
             =MailingLists/yocto \
             =MailingLists/kernel \
-            =Personal/Plati
+            =Personal/Plati \
+            =Personal/JobsOffers \
+            =Learn/Courses
