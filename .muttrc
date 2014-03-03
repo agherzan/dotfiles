@@ -3,22 +3,14 @@
 # See all headers
 # unignore *
 
-# Slidebar
-#
-set sidebar_width       = 30
-set sidebar_visible     = yes
-color sidebar_new yellow default
-bind index <left> sidebar-prev
-bind index <right> sidebar-next
-bind index <space> sidebar-open
-set sidebar_shortpath=yes
-
 # git patches macro
 macro index \Ch '<pipe-message>/home/agherzan/.mutt/frommutt' "output git patches"
 macro index \Ch '<pipe-entry>/home/agherzan/.mutt/frommutt' "output git patches"
 set auto_tag=yes
 
 auto_view text/html
+
+#macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
 
 macro index <f2> '<change-folder>imaps://imap.gmail.com:993<enter>'
 macro index <f3> '<change-folder>imaps://prod-webmail.windriver.com:993<enter>'
