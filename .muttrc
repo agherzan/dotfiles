@@ -3,6 +3,9 @@
 # See all headers
 # unignore *
 
+# Decode message before piping
+set pipe_decode
+
 # git patches macro
 macro index \Ch '<pipe-message>/home/agherzan/.mutt/frommutt' "output git patches"
 macro index \Ch '<pipe-entry>/home/agherzan/.mutt/frommutt' "output git patches"
