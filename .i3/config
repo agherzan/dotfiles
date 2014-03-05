@@ -179,20 +179,15 @@ assign [class="^Firefox$" instance="^Navigator$"] → 2: Web
 
 
 # Start stuff
-# Add pkcs11 - needed for centerim and mutt
-#exec /usr/bin/gnome-keyring-daemon --start --components=pkcs11
 exec nm-applet
 exec dropbox start
 exec owncloud
-#exec /home/agherzan/.copy/copy/x86_64/CopyAgent
-#exec qjoypad
-exec gnome-sound-applet
-#exec conky -c ~/.conkyrc
+#exec gnome-sound-applet
 #exec "xautolock -locker pyxtrlock -time 1"
 exec "udiskie -t"           # automount
 exec "unclutter -keystroke" # hide the mouse
 exec dunst -conf ~/.dunstrc # notification daemon
-exec "/usr/share/android-notifier-desktop/run.sh"
+#exec "/usr/share/android-notifier-desktop/run.sh"
 exec "hsetroot -fill ~/slim/themes/andrux/background.png && compton --config ~/.compton"
 exec "notifmail -n"
 
