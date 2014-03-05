@@ -7,14 +7,6 @@ fi
 
 # User specific aliases and functions
 
-#
-# Keychain
-#
-# Add my keys
-#/usr/bin/keychain -q $HOME/.ssh/id_rsa_wrs
-#/usr/bin/keychain -q $HOME/.ssh/id_rsa
-source $HOME/.keychain/$HOSTNAME-sh
-
 export EDITOR=/usr/bin/vim
 export PAGER=/usr/bin/vim
 
