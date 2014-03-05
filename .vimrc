@@ -10,36 +10,6 @@ set winminheight=0  " No minimum window height.
 set guifont=Droid\ Sans\ Mono\ 10
                     " Use a nice font if we've got a GUI available.
 
-" Miscellaneous setup
-" ===================
-
-set mat=2           " Blink for 2/10 of a second.
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" Load all Vundle bundles.
-Bundle 'gmarik/vundle'
-Bundle 'godlygeek/tabular'
-Bundle 'lunaris/vim-vorpal'
-Bundle 'mattn/zencoding-vim'
-Bundle 'SirVer/ultisnips'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'kchmck/vim-coffee-script'
-
-" Colour schemes / look and feel
-" ==============================
-Bundle 'sickill/vim-monokai'
-Bundle 'noah/vim256-color'
-Bundle 'shawncplus/skittles_berry'
-Bundle 'trapd00r/neverland-vim-theme'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'tpope/vim-vividchalk'
-
-set t_Co=256        " Use 256 colours -- we should be OK in most cases.
-colorscheme vividchalk
-
 " Vimrc editing
 " ==============
 
