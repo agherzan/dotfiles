@@ -1,2 +1,2 @@
 # Terminator as default i3 terminal
-export TERMINAL=terminator
+export TERMINAL=terminology
