@@ -2,7 +2,7 @@
     ui = true
 [user]
     name = Andrei Gherzan
-    email = andrei.gherzan@windriver.com
+    email = andrei@resin.io
 [sendemail]
     smtpserver = smtp.gmail.com
     smtpserverport = 587

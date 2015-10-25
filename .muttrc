@@ -6,22 +6,20 @@
 # Decode message before piping
 set pipe_decode
 
-# git patches macro
-macro index \Ch '<pipe-message>/home/agherzan/.mutt/frommutt' "output git patches"
-macro index \Ch '<pipe-entry>/home/agherzan/.mutt/frommutt' "output git patches"
-set auto_tag=yes
+#source ~/.mutt/sidebar
+
+macro index <f1> '<change-folder>imaps://andrei@gherzan.ro@imap.gmail.com:993<enter>'
+macro index <f2> '<change-folder>imaps://andrei@resin.io@imap.gmail.com:993<enter>'
+folder-hook 'gherzan.ro' 'source ~/.mutt/accounts/gherzan.ro'
+folder-hook 'resin.io' 'source ~/.mutt/accounts/resin.io'
+
+# Contextual folders
+macro index 'c' '<change-folder>?<change-dir><home>^K=<enter>'
+
+# Default account
+source ~/.mutt/accounts/gherzan.ro
 
 auto_view text/html
-
-#macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
-
-macro index <f2> '<change-folder>imaps://imap.gmail.com:993<enter>'
-macro index <f3> '<change-folder>imaps://prod-webmail.windriver.com:993<enter>'
-folder-hook 'gmail.com' 'source ~/.mutt/accounts/gherzan.ro'
-folder-hook 'windriver.com' 'source ~/.mutt/accounts/windriver.com'
-# switch to default account on startup
-source ~/.mutt/accounts/gherzan.ro
-#source ~/.mutt/accounts/windriver.com
 
 # Key bindings
 bind editor <space> noop

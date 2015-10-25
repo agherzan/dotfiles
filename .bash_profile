@@ -6,9 +6,9 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
-PATH=$PATH:$HOME/.local/bin:$HOME/bin
-
-# Pebble tools
-PATH=~/work/personal/pebble-dev/SDK/bin:$PATH
+PATH=$HOME/.local/bin:$HOME/bin:$PATH
 
 export PATH
+
+# Start X
+[[ $(tty) = "/dev/tty1" ]] && exec startx
