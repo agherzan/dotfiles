@@ -197,8 +197,8 @@ bindsym XF86Tools               exec "i3-msg 'exec pavucontrol'"
 bindsym XF86AudioRaiseVolume    exec "pactl set-sink-volume 1 +5% && killall -SIGUSR1 i3status"
 bindsym XF86AudioLowerVolume    exec "pactl set-sink-volume 1 -5% && killall -SIGUSR1 i3status"
 bindsym XF86AudioMute           exec "pactl set-sink-mute 1 toggle && killall -SIGUSR1 i3status"
-bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10"
-bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10"
+bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 2"
+bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 2"
 
 # Put this window on HDMI
 bindsym $mod+p move container to output HDMI2
