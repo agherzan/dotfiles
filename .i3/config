@@ -181,6 +181,7 @@ exec "syndaemon -t -i 1"                            # no mouse while typing
 exec "dunst -conf ~/.dunstrc"                       # notification daemon
 exec --no-startup-id "xset s off"
 exec --no-startup-id "xset -dpms"
+exec i3-battery.sh
 
 # Fix touchpad
 exec --no-startup-id "synclient TapButton2=3"
