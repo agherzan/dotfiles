@@ -12,3 +12,6 @@ export PATH
 
 # Start X
 [[ $(tty) = "/dev/tty1" ]] && exec startx
+
+# GPG key ID
+export GPGKEY=AD0E9640
