@@ -6,4 +6,4 @@ GROUP "University"
   ENTRY "ITU" URL "/home/andrei/work/ITu"
 ENDGROUP
 ENTRY "resin" URL "/home/andrei/work/resin"
-ENTRY "builds" URL "/home/andrei/work/builds"
+ENTRY "resin-os" URL "/home/andrei/work/resin/resin-os"
