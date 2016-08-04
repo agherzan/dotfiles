@@ -11,7 +11,6 @@
     smtpsslcertpath = ""
 [github]
     user = agherzan
-    token = 7dbe8429d61a12d745c51a4e5a56300c
 [core]
     editor = vim
     pager = less
