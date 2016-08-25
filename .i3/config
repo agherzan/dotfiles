@@ -233,11 +233,14 @@ mode "$mode_system" {
 bindsym $mod+Escape mode "$mode_system"
 
 # choose xrandr displaymode
-set $mode_display Display mode (d) dual, (h) HDMI, (l) laptop
+set $mode_display Display mode (k) docking dual, (o) docking only, (d) dual, (e) extern, (l) laptop, (h) hdmi
 mode "$mode_display" {
+    bindsym k exec --no-startup-id i3display.sh docking-dual, mode "default"
+    bindsym o exec --no-startup-id i3display.sh docking-only, mode "default"
     bindsym d exec --no-startup-id i3display.sh dual, mode "default"
-    bindsym h exec --no-startup-id i3display.sh hdmi, mode "default"
+    bindsym e exec --no-startup-id i3display.sh extern, mode "default"
     bindsym l exec --no-startup-id i3display.sh laptop, mode "default"
+    bindsym h exec --no-startup-id i3display.sh hdmi, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
