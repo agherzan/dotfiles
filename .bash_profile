@@ -6,7 +6,7 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
-PATH=$HOME/.local/bin:$HOME/bin:$PATH
+PATH=$HOME/.local/bin:$HOME/bin:$HOME/.gem/ruby/2.3.0/bin:$PATH
 
 export PATH
 
