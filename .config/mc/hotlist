@@ -7,3 +7,4 @@ GROUP "University"
 ENDGROUP
 ENTRY "resin" URL "/home/andrei/work/resin"
 ENTRY "resin-os" URL "/home/andrei/work/resin/resin-os"
+ENTRY "misc1-resin" URL "/mnt/misc1/work/resin"
