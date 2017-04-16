@@ -3,6 +3,7 @@
 [user]
     name = Andrei Gherzan
     email = andrei@resin.io
+	signingkey = 73BBE86B7E7AB7CF
 [sendemail]
     smtpserver = smtp.gmail.com
     smtpserverport = 587
@@ -16,3 +17,5 @@
     pager = less
 [credential]
     helper = store
+[commit]
+	gpgsign = true
