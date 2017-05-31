@@ -32,7 +32,7 @@ set cmdheight=1     " Command bar height is 1 line.
 set number          " Line numbering.
 set autoindent      " Always set automatic indenting on.
 set tabstop=4       " Set the tabstop to be 2 characters.
-set expandtab       " Always expand tabs to spaces.
+"set expandtab       " Always expand tabs to spaces.
 set shiftwidth=4    " Set the tabstop to be 2 characters (autoindenting).
 set shiftround      " Use multiple of shiftwidth when using '<' and '>'.
 
@@ -120,3 +120,10 @@ digraph FF 8869
 "=================
 "CoffeScript
 au BufRead,BufNewFile *.coffee set ft=coffee
+
+" Hidden character
+set list
+set listchars=space:.,tab:▸\ ,eol:¬
+highlight NonText ctermfg=0
+highlight SpecialKey ctermfg=0
+
