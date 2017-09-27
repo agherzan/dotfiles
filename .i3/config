@@ -26,6 +26,9 @@ bindsym Cancel kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run -fn -misc-*-*-*-*-*-26-*-*-*-*-*-*-* -nf '#ffffff'
+bindsym $mod+p exec passmenu -fn -misc-*-*-*-*-*-26-*-*-*-*-*-*-* -nf '#ffffff'
+bindsym $mod+w exec nmcli_dmenu -fn -misc-*-*-*-*-*-26-*-*-*-*-*-*-* -nf '#ffffff'
+bindsym $mod+c exec clipmenu -fn -misc-*-*-*-*-*-26-*-*-*-*-*-*-* -nf '#ffffff'
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -56,7 +59,7 @@ bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -72,23 +75,23 @@ bindsym $mod+a focus parent
 set $ws1  "1: term"
 set $ws2  "2: www"
 set $ws3  "3: com"
-set $ws4  "4: four"
-set $ws5  "5: five"
+set $ws4  "4: work"
+set $ws5  "5: servers"
 set $ws6  "6: six"
 set $ws7  "7: seven"
 set $ws8  "8: eight"
 set $ws9  "9: nine"
 set $ws10 "10: ten"
 
-workspace $ws1  output eDP-1
-workspace $ws2  output eDP-1
-workspace $ws3  output eDP-1
-workspace $ws4  output eDP-1
-workspace $ws5  output eDP-1
-workspace $ws6  output eDP-1
-workspace $ws7  output eDP-1
-workspace $ws8  output eDP-1
-workspace $ws9  output HDMI2
+workspace $ws1  output DP1
+workspace $ws2  output DP1
+workspace $ws3  output DP1
+workspace $ws4  output DP1
+workspace $ws5  output DP1
+workspace $ws6  output eDP1
+workspace $ws7  output eDP1
+workspace $ws8  output eDP1
+workspace $ws9  output eDP1
 workspace $ws10 output HDMI2
 
 # switch to workspace
@@ -156,9 +159,16 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
+    font pango:DejaVu Sans Mono 8
     status_command i3status
-    workspace_buttons   yes
+    workspace_buttons   no
     position            bottom
+}
+
+bar {
+    font pango:DejaVu Sans Mono 6
+    workspace_buttons   yes
+    position            top
 }
 
 # Background
@@ -174,7 +184,7 @@ assign [class="^Skype$" instance="^skype$"] → $ws3
 assign [class="^Mumble$" instance="^mumble$"] → $ws3
 
 # Start stuff
-#exec "xautolock -locker 'xtrlock -b' -time 5"       # lock screen
+exec xautolock -time 5 -locker "/usr/bin/xlock -mode blank -geometry 1x1 -echokeys -echokey \* +description +showdate"
 exec "udiskie -t"                                   # automount
 exec "unclutter -keystroke"                         # hide the mouse
 exec "syndaemon -t -i 1"                            # no mouse while typing
@@ -182,32 +192,30 @@ exec "dunst -conf ~/.dunstrc"                       # notification daemon
 exec --no-startup-id "xset s off"
 exec --no-startup-id "xset -dpms"
 exec i3-battery.sh
+exec clipmenud
 
 # Fix touchpad
 exec --no-startup-id "synclient TapButton2=3"
 exec --no-startup-id "synclient TapButton3=2"
 
 # My shortcuts
-bindsym $mod+l exec "xtrlock"
-bindsym $mod+b exec chromium --force-device-scale-factor=1.5
-bindsym $mod+Shift+Return exec --no-startup-id spacefm
+bindsym $mod+l exec "/usr/bin/xlock -mode blank -geometry 1x1 -echokeys -echokey \* +description +showdate"
+bindsym $mod+b exec google-chrome-stable
+bindsym $mod+n exec nmcli_dmenu
 
 # Keyboard
 bindsym XF86Tools               exec "i3-msg 'exec pavucontrol'"
-bindsym XF86AudioRaiseVolume    exec "pactl set-sink-volume 1 +5% && killall -SIGUSR1 i3status"
-bindsym XF86AudioLowerVolume    exec "pactl set-sink-volume 1 -5% && killall -SIGUSR1 i3status"
-bindsym XF86AudioMute           exec "pactl set-sink-mute 1 toggle && killall -SIGUSR1 i3status"
+bindsym XF86AudioRaiseVolume    exec "amixer set Master 2+ && killall -SIGUSR1 i3status"
+bindsym XF86AudioLowerVolume    exec "amixer set Master 2- && killall -SIGUSR1 i3status"
+bindsym XF86AudioMute           exec "amixer set Master toggle && killall -SIGUSR1 i3status"
+bindsym XF86AudioMicMute        exec "amixer set Capture toggle && killall -SIGUSR1 i3status"
 bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 2"
 bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 2"
-
-# Put this window on HDMI
-bindsym $mod+p move container to output HDMI2
 
 # Floating windows
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Gnome-control-center"] floating enable
-for_window [class="Spacefm"] floating enable
 
 # Almost no decoration
 new_window 1pixel
