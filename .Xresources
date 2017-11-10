@@ -1,0 +1,85 @@
+! Extensions
+URxvt.perl-ext-common:  resize-font,tabbedex
+
+! Resize font
+URxvt.resize-font.smaller: C-Down
+URxvt.resize-font.bigger: C-Up
+
+! Tabbedex
+URxvt.tabbed.new-button:       no
+URxvt.tabbed.autohide:         yes
+URxvt.tabbed.no-tabbedex-keys: yes
+URxvt.tabbed.tabbar-fg: 240
+URxvt.tabbed.tabbar-bg: 234
+URxvt.tabbed.tab-fg:    39
+URxvt.tabbed.tab-bg:    0
+! Tabbedex keybindings (4-1: Super + Alt)
+URxvt.keysym.4-1-Down:    perl:tabbedex:new_tab
+URxvt.keysym.4-1-Left:    perl:tabbedex:prev_tab
+URxvt.keysym.4-1-Right:   perl:tabbedex:next_tab
+URxvt.keysym.4-1-Up:      perl:tabbedex:rename_tab
+URxvt.keysym.4-1-C-Left:  perl:tabbedex:move_tab_left
+URxvt.keysym.4-1-C-Right: perl:tabbedex:move_tab_right
+
+Xft.dpi : 180
+Xft.antialias: false
+Xft.rgba: rgb
+
+URxvt.scrollstyle: xterm
+URxvt.background: black
+URxvt.foreground: gray
+URxvt.preeditType: Root
+URxvt.scrollBar: false
+//URxvt.scrollBar_right: true
+URxvt.jumpScroll: true
+URxvt.termName: rxvt-unicode
+URxvt.geometry: 83x27
+urxvt.font: xft:DejaVuSansMono:size=11
+
+Xpdf*fontList: -adobe-helvetica-bold-r-normal--0-0-0-0-p-0-iso8859-1
+Xpdf.initialZoom: 200
+
+! With the following, the width should be $((11*COLUMNS+13)) pixels;
+! in contrast, the fixed = 6x13 bitmap font is typically used on a
+! low-definition screen, giving a width of $((6*COLUMNS+13)) pixels.
+XTerm*faceName:  Monospace
+XTerm*faceSize:  10
+! For xterm menus. This font is large enough, but a bit ugly.
+XTerm*font:  -adobe-helvetica-bold-r-normal--0-0-0-0-p-0-iso8859-1
+
+
+
+
+
+
+! tango color  scheme
+
+URxvt*background: #2B2B2B
+URxvt*foreground: #DEDEDE
+
+URxvt*colorUL: #86a2b0
+
+! black
+URxvt*color0  : #2E3436
+URxvt*color8  : #555753
+! red
+URxvt*color1  : #CC0000
+URxvt*color9  : #EF2929
+! green
+URxvt*color2  : #4E9A06
+URxvt*color10 : #8AE234
+! yellow
+URxvt*color3  : #C4A000
+URxvt*color11 : #FCE94F
+! blue
+URxvt*color4  : #253549
+URxvt*color12 : #729FCF
+! magenta
+URxvt*color5  : #75507B
+URxvt*color13 : #AD7FA8
+! cyan
+URxvt*color6  : #06989A
+URxvt*color14 : #34E2E2
+! white
+URxvt*color7  : #D3D7CF
+URxvt*color15 : #EEEEEC
