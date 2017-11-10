@@ -200,7 +200,7 @@ exec --no-startup-id "synclient TapButton3=2"
 
 # My shortcuts
 bindsym $mod+l exec "/usr/bin/xlock -mode blank -geometry 1x1 -echokeys -echokey \* +description +showdate"
-bindsym $mod+b exec google-chrome-stable
+bindsym $mod+b exec firefox
 bindsym $mod+n exec nmcli_dmenu
 
 # Keyboard
