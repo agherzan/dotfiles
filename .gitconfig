@@ -17,5 +17,3 @@
     pager = less
 [credential]
     helper = store
-[commit]
-	gpgsign = true
