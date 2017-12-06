@@ -21,7 +21,7 @@ URxvt.keysym.4-1-Up:      perl:tabbedex:rename_tab
 URxvt.keysym.4-1-C-Left:  perl:tabbedex:move_tab_left
 URxvt.keysym.4-1-C-Right: perl:tabbedex:move_tab_right
 
-Xft.dpi : 180
+Xft.dpi : 166
 Xft.antialias: false
 Xft.rgba: rgb
 
