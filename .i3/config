@@ -205,12 +205,13 @@ bindsym $mod+n exec nmcli_dmenu
 
 # Keyboard
 bindsym XF86Tools               exec "i3-msg 'exec pavucontrol'"
-bindsym XF86AudioRaiseVolume    exec "amixer set Master 2+ && killall -SIGUSR1 i3status"
-bindsym XF86AudioLowerVolume    exec "amixer set Master 2- && killall -SIGUSR1 i3status"
+bindsym XF86AudioRaiseVolume    exec "amixer set Master 2%+ && killall -SIGUSR1 i3status"
+bindsym XF86AudioLowerVolume    exec "amixer set Master 2%- && killall -SIGUSR1 i3status"
 bindsym XF86AudioMute           exec "amixer set Master toggle && killall -SIGUSR1 i3status"
 bindsym XF86AudioMicMute        exec "amixer set Capture toggle && killall -SIGUSR1 i3status"
 bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 2"
 bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 2"
+bindsym XF86Calculator exec "gnome-calculator"
 
 # Floating windows
 for_window [class="Gnome-calculator"] floating enable
