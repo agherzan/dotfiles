@@ -126,4 +126,4 @@ set list
 set listchars=space:.,tab:▸\ ,eol:¬
 highlight NonText ctermfg=0
 highlight SpecialKey ctermfg=0
-
+highlight Comment ctermfg=LightBlue
