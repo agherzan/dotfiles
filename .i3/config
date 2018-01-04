@@ -27,7 +27,7 @@ bindsym Cancel kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run -fn -misc-*-*-*-*-*-26-*-*-*-*-*-*-* -nf '#ffffff'
 bindsym $mod+p exec passmenu -fn -misc-*-*-*-*-*-26-*-*-*-*-*-*-* -nf '#ffffff'
-bindsym $mod+w exec nmcli_dmenu -fn -misc-*-*-*-*-*-26-*-*-*-*-*-*-* -nf '#ffffff'
+bindsym $mod+w exec networkmanager_dmenu -fn -misc-*-*-*-*-*-26-*-*-*-*-*-*-* -nf '#ffffff'
 bindsym $mod+c exec clipmenu -fn -misc-*-*-*-*-*-26-*-*-*-*-*-*-* -nf '#ffffff'
 
 # alternatively, you can use the cursor keys:
@@ -202,6 +202,10 @@ exec --no-startup-id "synclient TapButton3=2"
 bindsym $mod+l exec "/usr/bin/xlock -mode blank -geometry 1x1 -echokeys -echokey \* +description +showdate"
 bindsym $mod+b exec firefox
 bindsym $mod+n exec nmcli_dmenu
+
+# Grab OTPs from ykman oath
+#bindsym $mod+o exec yubikey-oath-dmenu --notify --clipboard clipboard
+bindsym $mod+o exec yubikey-oath-dmenu --notify --type
 
 # Keyboard
 bindsym XF86Tools               exec "i3-msg 'exec pavucontrol'"
